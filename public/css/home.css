@@ -1,0 +1,39 @@
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:#D2B48C;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#6F4E37;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#6F4E37;
+    color:white;
+    cursor:pointer;
+}
+
+.features{
+    padding:50px 10%;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+    width:300px;
+    text-align:center;
+}

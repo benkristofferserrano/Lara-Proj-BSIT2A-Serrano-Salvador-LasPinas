@@ -1,0 +1,27 @@
+.contact{
+    padding:50px 10%;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:500px;
+}
+
+input,
+textarea{
+    padding:12px;
+}
+
+button{
+    padding:12px;
+    background:#6F4E37;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.details{
+    margin-top:40px;
+}
