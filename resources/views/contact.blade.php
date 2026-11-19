@@ -1,49 +1,9 @@
 @extends('layouts.app')
-
+@section('title', "Contact | B&B Café")
+@push('styles')<link rel="stylesheet" href="{{ asset('css/contact.css') }}">@endpush
 @section('content')
-
-<section class="contact">
-
-    <h1>Contact Us</h1>
-
-    <form id="contactForm">
-
-        <input type="text" id="name" placeholder="Full Name">
-
-        <input type="email" id="email" placeholder="Email Address">
-
-        <input type="text" id="subject" placeholder="Subject">
-
-        <textarea id="message" placeholder="Message"></textarea>
-
-        <button type="submit">
-            Send Message
-        </button>
-
-    </form>
-
-    <p id="result"></p>
-
-    <div class="details">
-
-        <h3>Contact Details</h3>
-
-        <p>📍 Butuan City</p>
-
-        <p>📞 +63 912 345 6789</p>
-
-        <p>✉ benandbean@gmail.com</p>
-
-    </div>
-
-</section>
-
+<section class="page-hero contact-hero"><div><span class="eyebrow light">WE'D LOVE TO HEAR FROM YOU</span><h1>Let's have<br><em>a conversation.</em></h1><p>Questions, feedback, or just want to say hello? Send us a message.</p></div></section>
+<section class="contact-section section-wrap"><div class="contact-info"><span class="eyebrow">GET IN TOUCH</span><h2>We're just<br><em>a message away.</em></h2><p>We'd be happy to help with questions about our menu, café, or your next visit.</p><div class="contact-detail"><span>VISIT</span><p>Butuan City, Agusan del Norte<br>Philippines</p></div><div class="contact-detail"><span>EMAIL</span><p>hello@beanandbens.cafe</p></div><div class="contact-detail"><span>OPENING HOURS</span><p>Monday – Sunday<br>8:00 AM – 8:00 PM</p></div></div>
+<form class="contact-form" id="contactForm" novalidate><h3>Send us a message</h3><p class="form-intro">All fields are required.</p><div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name"><small class="field-error"></small></div><div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com"><small class="field-error"></small></div><div class="form-row"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?"><small class="field-error"></small></div><div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea><small class="field-error"></small></div><button class="button button-green" type="submit">Send message <span>→</span></button><p class="form-success" id="formSuccess" role="status" hidden>Thank you! Your message passed the form validation.</p><p class="form-disclaimer">Demo form: this validates your message in the browser. Connect a Laravel mail handler or database to receive and store submissions.</p></form></section>
 @endsection
-
-@push('styles')
-<link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-@endpush
-
-@push('scripts')
-<script src="{{ asset('js/contact.js') }}"></script>
-@endpush
+@push('scripts')<script src="{{ asset('js/contact.js') }}" defer></script>@endpush

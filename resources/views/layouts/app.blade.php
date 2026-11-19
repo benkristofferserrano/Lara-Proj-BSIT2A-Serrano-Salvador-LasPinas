@@ -3,88 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben & Bean Cafe</title>
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,sans-serif;
-        }
-
-        body{
-            background:#FFF8F0;
-            color:#333;
-        }
-
-        nav{
-            background:#6F4E37;
-            padding:15px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
-
-        .logo{
-            color:white;
-            font-size:24px;
-            font-weight:bold;
-        }
-
-        nav ul{
-            display:flex;
-            list-style:none;
-            gap:20px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-        }
-
-        footer{
-            background:#6F4E37;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:50px;
-        }
-
-        .container{
-            min-height:80vh;
-        }
-
-        .dark{
-            background:#121212;
-            color:white;
-        }
-    </style>
-
+    <meta name="description" content="Bean & Ben's Café — thoughtfully brewed coffee, fresh bites, and good moments.">
+    <title>@yield('title', "B&B | Bean & Ben's Café")</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
 </head>
 <body>
+    <header class="site-header">
+        <a class="brand" href="{{ route('home') }}" aria-label="B&B home">
+            <img class="brand-logo" src="{{ asset('images/bb-logo.png') }}" alt="B&B — Bean & Ben's Café">
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+            <a class="{{ request()->routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">Menu</a>
+            <a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+            <a class="{{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button>
+    </header>
 
-<nav>
-    <div class="logo">☕ Ben & Bean Cafe</div>
+    <main>@yield('content')</main>
 
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    @yield('content')
-</div>
-
-<footer>
-    <p>Ben & Bean Cafe © 2026</p>
-    <p>Serrano | Salvador | Las Pinas</p>
-</footer>
-
-@stack('scripts')
-
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img class="footer-logo" src="{{ asset('images/bb-logo.png') }}" alt="B&B — Bean & Ben's Café">
+                <h2>Good coffee.<br>Good company.</h2>
+                <p>Make room for a little more good in your day.</p>
+            </div>
+            <div><h3>Explore</h3><a href="{{ route('home') }}">Home</a><a href="{{ route('menu') }}">Menu</a><a href="{{ route('about') }}">About</a><a href="{{ route('contact') }}">Contact</a></div>
+            <div><h3>Visit us</h3><p>Butuan City, Agusan del Norte<br>Philippines</p><p>Daily · 8:00 AM – 8:00 PM</p></div>
+            <div><h3>Say hello</h3><p>hello@beanandbens.cafe</p><p>Follow us on social media</p><div class="social-links">
+                <a href="#" aria-label="Instagram" class="social-name">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.6" cy="6.7" r="1.1" fill="currentColor"/></svg><span>INSTAGRAM</span>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-name">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.3V13h2.8v8h3.4z"/></svg><span>FACEBOOK</span>
+                </a>
+            </div></div>
+        </div>
+        <div class="footer-bottom"><span>© {{ date('Y') }} B&B — Bean & Ben's Café</span><span>Made for coffee moments.</span></div>
+        <div class="footer-team"><strong>Group members:</strong> UPDATE WITH ALL GROUP MEMBERS' NAMES BEFORE SUBMISSION.</div>
+    </footer>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @stack('scripts')
 </body>
 </html>

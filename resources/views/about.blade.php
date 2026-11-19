@@ -1,63 +1,10 @@
 @extends('layouts.app')
-
+@section('title', "Our Story | B&B Café")
+@push('styles')<link rel="stylesheet" href="{{ asset('css/about.css') }}">@endpush
 @section('content')
-
-<section class="about">
-
-    <h1>About Ben & Bean Cafe</h1>
-
-    <p>
-        Ben & Bean Cafe is dedicated to delivering quality coffee and excellent customer service.
-    </p>
-
-    <p id="extraText" style="display:none;">
-        Started as a small local coffee shop, Ben & Bean Cafe grew into a favorite destination for coffee lovers.
-        We focus on creating a welcoming environment where customers can relax, study, and enjoy handcrafted beverages.
-    </p>
-
-    <button id="readBtn">
-        Read More
-    </button>
-
-    <h2>Mission</h2>
-
-    <p>
-        To serve exceptional coffee and create memorable experiences for every customer.
-    </p>
-
-    <h2>Vision</h2>
-
-    <p>
-        To become the leading neighborhood cafe known for quality products and outstanding hospitality.
-    </p>
-
-    <div class="team">
-
-        <div class="staff">
-            <h3>Benjamin Cruz</h3>
-            <p>Founder</p>
-        </div>
-
-        <div class="staff">
-            <h3>Sophia Reyes</h3>
-            <p>Manager</p>
-        </div>
-
-        <div class="staff">
-            <h3>Daniel Santos</h3>
-            <p>Head Barista</p>
-        </div>
-
-    </div>
-
-</section>
-
+<section class="page-hero about-hero"><div><span class="eyebrow light">A PLACE TO COME TOGETHER</span><h1>Our story is<br><em>still brewing.</em></h1><p>A café built around good coffee, warm welcomes, and the little moments in between.</p></div></section>
+<section class="story-section section-wrap"><div class="story-photo"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=85" alt="Barista preparing coffee"><span>THE HEART OF B&B</span></div><div class="story-text"><span class="eyebrow">HOW IT STARTED</span><h2>Rooted in coffee.<br><em>Made for people.</em></h2><p>Bean & Ben's Café began with a simple idea: create a comfortable place where people can enjoy thoughtfully prepared drinks and feel welcome every time they visit.</p><p>Whether you're catching up with friends, taking a study break, or enjoying a quiet moment, there's always a seat for you at B&B.</p><p>We want every detail—from the first greeting to the final sip—to feel thoughtful and genuine. Our café is a celebration of everyday connections and the joy of sharing something good.</p></div></section>
+<section class="purpose-section"><div class="section-wrap purpose-grid"><article><span class="eyebrow light">01 / OUR MISSION</span><h2>Serve good coffee.<br><em>Share good moments.</em></h2><p>To offer quality drinks and welcoming service in a comfortable space where every guest feels valued.</p></article><article><span class="eyebrow light">02 / OUR VISION</span><h2>A familiar place<br><em>for every day.</em></h2><p>To become a loved neighborhood café known for meaningful connections, consistency, and memorable coffee experiences.</p></article></div></section>
+<section class="team-section section-wrap"><div class="section-heading"><div><span class="eyebrow">THE PEOPLE BEHIND THE BREW</span><h2>Meet the <em>team.</em></h2></div><p>Good things happen when good people work together.</p></div><div class="team-grid"><article><div class="team-avatar">B</div><h3>Ben</h3><span>FOUNDER / CAFÉ TEAM</span></article><article><div class="team-avatar">&</div><h3>Your teammate</h3><span>ADD ROLE</span></article><article><div class="team-avatar">B</div><h3>Your teammate</h3><span>ADD ROLE</span></article></div><p class="team-note">Replace the sample team names and roles with your actual group members.</p></section>
 @endsection
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('css/about.css') }}">
-@endpush
-
-@push('scripts')
-<script src="{{ asset('js/about.js') }}"></script>
-@endpush
