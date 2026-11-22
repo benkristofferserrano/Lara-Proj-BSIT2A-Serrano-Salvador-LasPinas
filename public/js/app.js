@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyTheme = (theme) => {
     document.body.dataset.theme = theme;
     const dark = theme === 'dark';
-    if (themeIcon) themeIcon.textContent = dark ? '☀' : '☾';
-    if (themeLabel) themeLabel.textContent = dark ? 'Light mode' : 'Dark mode';
+    if (themeIcon) themeIcon.textContent = dark ? '🌙' : '🔆';
+    if (themeLabel) themeLabel.textContent = dark ? 'Dark mode' : 'Light mode';
     if (themeButton) {
-      themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      themeButton.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      themeButton.setAttribute('aria-label', dark ? 'Dark mode is active. Click to switch to light mode.' : 'Light mode is active. Click to switch to dark mode.');
+      themeButton.setAttribute('aria-pressed', String(dark));
+      themeButton.title = dark ? 'Dark mode' : 'Light mode';
     }
   };
   let savedTheme = 'light';
