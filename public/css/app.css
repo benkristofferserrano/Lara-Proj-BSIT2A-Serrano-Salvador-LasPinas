@@ -23,3 +23,16 @@ body[data-theme="dark"] .form-success{color:#d4b18e}
 body[data-theme="dark"] .story-photo span,body[data-theme="dark"] .image-note{background:#68472f}
 body[data-theme="dark"] .text-link{color:#d2a77e;border-color:#a98260}
 body[data-theme="dark"] .button-green{background:#8b5e3c}
+
+
+/* Shared storefront photo frame and visit/location panel across every page */
+.storefront-visit{width:min(1160px,87%);margin:0 auto;padding:82px 0 92px;display:grid;grid-template-columns:1.08fr .92fr;gap:7%;align-items:center}
+.storefront-frame{position:relative;padding:13px;background:#fff;border:1px solid #dfcbb6;box-shadow:0 18px 45px rgba(65,42,27,.15);transform:rotate(-1deg)}
+.storefront-frame:before{content:'';position:absolute;inset:6px;border:1px solid #ead9c8;pointer-events:none;z-index:1}
+.storefront-frame img{display:block;width:100%;height:360px;object-fit:cover;object-position:center 52%}
+.frame-label{position:absolute;left:25px;bottom:24px;background:#4b3024;color:#fff;padding:10px 15px;font-size:9px;letter-spacing:2px;z-index:2}
+.storefront-copy h2{font:700 clamp(34px,4vw,48px)/1.2 'Playfair Display',serif;margin:0 0 18px}
+.storefront-copy h2 em{color:var(--green)}
+.storefront-copy>p:not(.location-note){color:var(--muted);font-size:13px;line-height:1.9;max-width:450px;margin:0 0 24px}
+.location-note{font-size:10px;color:var(--muted);margin:16px 0 0;max-width:420px}
+@media(max-width:760px){.storefront-visit{grid-template-columns:1fr;gap:32px;padding:58px 0 68px}.storefront-frame img{height:260px}.storefront-frame{transform:none}.frame-label{left:20px;bottom:20px}}

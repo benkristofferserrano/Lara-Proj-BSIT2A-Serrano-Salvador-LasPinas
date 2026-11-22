@@ -26,7 +26,22 @@
         <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button>
     </header>
 
-    <main>@yield('content')</main>
+    <main>
+        @yield('content')
+        <section class="storefront-visit" aria-label="Visit Bean and Ben's Café">
+            <div class="storefront-frame">
+                <img src="{{ asset('images/storefront.png') }}" alt="Exterior of Bean & Ben's Café with outdoor seating">
+                <span class="frame-label">THE B&B CAFÉ EXPERIENCE</span>
+            </div>
+            <div class="storefront-copy">
+                <span class="eyebrow">COME FIND YOUR PLACE</span>
+                <h2>Your next coffee break<br><em>starts right here.</em></h2>
+                <p>Visit Bean & Ben's Café in Butuan City, Agusan del Norte, Philippines. Drop by for a cup, a bite, and a little time well spent.</p>
+                <a class="button button-green" href="https://www.google.com/maps/search/?api=1&query=Butuan+City%2C+Agusan+del+Norte%2C+Philippines" target="_blank" rel="noopener">View area on map <span>↗</span></a>
+                <p class="location-note">Location shown is a city-level placeholder. Add the café's exact address and map pin before publishing.</p>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-main">
