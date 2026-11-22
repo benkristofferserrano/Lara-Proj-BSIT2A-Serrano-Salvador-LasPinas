@@ -1,9 +1,83 @@
 @extends('layouts.app')
-@section('title', "Contact | B&B Café")
-@push('styles')<link rel="stylesheet" href="{{ asset('css/contact.css') }}?v=20261122-contact">@endpush
+
 @section('content')
-<section class="page-hero contact-hero"><div><span class="eyebrow light">WE'D LOVE TO HEAR FROM YOU</span><h1>Let's have<br><em>a conversation.</em></h1><p>Questions, feedback, or want to get in touch? Send us a message.</p></div></section>
-<section class="contact-section section-wrap"><div class="contact-info"><span class="eyebrow">GET IN TOUCH</span><h2>We're just<br><em>a message away.</em></h2><p>We'd be happy to help with questions about our menu, café, or your next visit.</p><div class="contact-detail"><span>VISIT</span><p>Butuan City, Agusan del Norte<br>Philippines</p></div><div class="contact-detail"><span>EMAIL</span><p><a href="mailto:officialbeanandbenscafe@gmail.com">officialbeanandbenscafe@gmail.com</a></p></div><div class="contact-detail"><span>OPENING HOURS</span><p>Monday – Sunday<br>8:00 AM – 8:00 PM</p></div></div>
-<form class="contact-form" id="contactForm" novalidate><h3>Send us a message</h3><p class="form-intro">All fields are required.</p><div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name"><small class="field-error"></small></div><div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com"><small class="field-error"></small></div><div class="form-row"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?"><small class="field-error"></small></div><div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea><small class="field-error"></small></div><button class="button button-green" type="submit">Send message <span>→</span></button><p class="form-success" id="formSuccess" role="status" hidden>Thank you! Your message passed the form validation.</p></form></section>
+
+<section class="contact-hero">
+
+    <div class="hero-content">
+
+        <p class="subtitle">A LITTLE PAUSE, A LOT OF GOOD</p>
+
+        <h1>
+            Your daily cup<br>
+            of something <em>good.</em>
+        </h1>
+
+        <p class="description">
+            Have a question or want to share something?
+            We'd love to hear from you.
+        </p>
+
+        <div class="contact-info">
+            <p>📍 Butuan City</p>
+            <p>📞 +63 912 345 6789</p>
+            <p>✉ officialbeanandbenscafe@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="contact-form-box">
+
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you.</p>
+
+       <form id="contactForm"> 
+<div class="form-group">
+    <label for="name">Full Name</label>
+  <input type="text" id="name" placeholder="Full Name" aria-describedby="nameError">
+
+    <small id="nameError" class="error"></small>
+</div>
+
+<div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Email Address" aria-describedby="emailError">
+
+    <small id="emailError" class="error"></small>
+</div>
+
+<div class="form-group">
+    <label for="subject">Subject</label>
+<input type="text" id="subject" placeholder="Subject" aria-describedby="subjectError">
+    <small id="subjectError" class="error"></small>
+</div>
+
+<div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" placeholder="Your Message" aria-describedby="messageError"></textarea>
+    <small id="messageError" class="error"></small>
+</div>
+
+    <button type="submit">
+        Send Message →
+    </button>
+
+</form>
+
+<p id="successMessage" hidden>
+    Thank you! Your message has been validated successfully.
+</p>
+
+    </div>
+
+</section>
+
 @endsection
-@push('scripts')<script src="{{ asset('js/contact.js') }}" defer></script>@endpush
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+@endpush
+
+@push('scripts')
+<script src="{{ asset('js/contact.js') }}"></script>
+@endpush
