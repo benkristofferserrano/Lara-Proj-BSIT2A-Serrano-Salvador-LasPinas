@@ -31,28 +31,30 @@
         <h2>Get in Touch</h2>
         <p>We'd love to hear from you.</p>
 
-        
-<form id="contactForm">
+       <form id="contactForm"> 
+<div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Full Name">
+    <small id="nameError" class="error"></small>
+</div>
 
-    <div class="form-group">
-        <input type="text" id="name" placeholder="Full Name">
-        <small id="nameError" class="error"></small>
-    </div>
+<div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Email Address">
+    <small id="emailError" class="error"></small>
+</div>
 
-    <div class="form-group">
-        <input type="email" id="email" placeholder="Email Address">
-        <small id="emailError" class="error"></small>
-    </div>
+<div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" placeholder="Subject">
+    <small id="subjectError" class="error"></small>
+</div>
 
-    <div class="form-group">
-        <input type="text" id="subject" placeholder="Subject">
-        <small id="subjectError" class="error"></small>
-    </div>
-
-    <div class="form-group">
-        <textarea id="message" placeholder="Your Message"></textarea>
-        <small id="messageError" class="error"></small>
-    </div>
+<div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <small id="messageError" class="error"></small>
+</div>
 
     <button type="submit">
         Send Message →

@@ -22,6 +22,7 @@ contactForm.addEventListener("submit", function (event) {
         .querySelectorAll("#contactForm input, #contactForm textarea")
         .forEach(function (field) {
             field.classList.remove("invalid");
+            field.removeAttribute("aria-invalid");
         });
 
     // Hide previous success message
@@ -30,6 +31,7 @@ contactForm.addEventListener("submit", function (event) {
     let isValid = true;
 
     // Check name
+
     if (name === "") {
         showError("name", "Name is required.");
     }
@@ -66,6 +68,8 @@ contactForm.addEventListener("submit", function (event) {
         document.getElementById(fieldId + "Error").textContent = errorMessage;
 
         document.getElementById(fieldId).classList.add("invalid");
+
+        document.getElementById(fieldId).setAttribute("aria-invalid", "true");
 
         isValid = false;
     }
