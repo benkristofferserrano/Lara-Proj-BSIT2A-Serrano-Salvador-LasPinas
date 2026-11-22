@@ -109,6 +109,12 @@
     gap: 5px;
 }
 
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #68442f;
+}
+
 #contactForm input,
 #contactForm textarea {
     width: 100%;
