@@ -58,9 +58,10 @@ contactForm.addEventListener("submit", function (event) {
     // Show success message if everything is valid
     if (isValid) {
         document.getElementById("successMessage").hidden = false;
-
-        // Clear the form
         contactForm.reset();
+    } else {
+        const firstInvalidField = contactForm.querySelector(".invalid");
+        firstInvalidField.focus();
     }
 
     // Function for displaying errors
