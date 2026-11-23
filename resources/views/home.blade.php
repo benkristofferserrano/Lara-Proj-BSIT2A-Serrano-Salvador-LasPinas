@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', "B&B | Bean & Ben's Café")
-@push('styles')<link rel="stylesheet" href="{{ asset('css/home.css') }}">@endpush
+@push('styles')<link rel="stylesheet" href="{{ asset('css/home.css') }}?v=20261123-espresso-final">@endpush
 @section('content')
 <section class="hero-slider" aria-label="Café highlights">
     <div class="hero-slide active" style="--hero-image:url('{{ asset('images/cafe-exterior.jpg') }}')">

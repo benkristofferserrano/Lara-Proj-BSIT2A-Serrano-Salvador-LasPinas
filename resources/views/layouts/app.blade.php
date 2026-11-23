@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=20261122-green">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=20261123-espresso-final">
     @stack('styles')
 </head>
 <body>
@@ -62,7 +62,7 @@
         <div class="footer-bottom"><span>© {{ date('Y') }} B&B — Bean & Ben's Café</span></div>
         <div class="footer-team"><strong>Group Members:</strong> Serrano, Salvador, Las Piñas</div>
     </footer>
-    <script src="{{ asset('js/app.js') }}?v=20261122-green" defer></script>
+    <script src="{{ asset('js/app.js') }}?v=20261123-espresso-final" defer></script>
     @stack('scripts')
 </body>
 </html>

@@ -86,3 +86,25 @@
     .menu-photo-placeholder{padding:9px;aspect-ratio:1.05/1}
     .menu-category{margin-bottom:40px}
 }
+
+/* Editorial coffee-brown accent on the menu hero heading. */
+.menu-banner h1 em {
+    color: #e2c8aa;
+    font-style: italic;
+    font-weight: 600;
+}
+body[data-theme="dark"] .menu-banner {
+    background-image: linear-gradient(90deg, rgba(38, 23, 16, .96), rgba(54, 34, 24, .78) 48%, rgba(30, 20, 15, .48)), url('../images/storefront.png');
+    color: #fffaf4;
+}
+body[data-theme="dark"] .menu-banner h1,
+body[data-theme="dark"] .menu-banner p { color: #fffaf4; }
+body[data-theme="dark"] .menu-banner h1 em { color: #e2c8aa; }
+
+
+/* Warm category labels coordinated with the 01 / 02 / 03 numbering. */
+.category-heading h3 { color: #a77a56; }
+.category-heading > span { color: #a77a56; }
+body[data-theme="dark"] .category-heading h3,
+body[data-theme="dark"] .category-heading > span { color: #d2a77e; }
+body[data-theme="dark"] .category-heading:after { background: #66503e; }

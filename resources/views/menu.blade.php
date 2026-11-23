@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 @section('title', "Menu | B&B Café")
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/menu.css') }}?v=20261123-bb-menu-polish">
@@ -8,7 +8,7 @@
 <section class="menu-banner">
     <div>
         <span class="eyebrow light">A CUP FOR EVERY MOOD</span>
-        <h1>Find your<br><em>kind of good.</em></h1>
+        <h1>Find your<br><em>kind of coffee.</em></h1>
         <p>Explore coffee favorites and little treats made for your day.</p>
     </div>
 </section>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="menu-category">
-        <div class="category-heading"><h3>COFFEE FAVORITES</h3><span>01</span></div>
+        <div class="category-heading"><h3>COFFEES</h3><span>01</span></div>
         <div class="menu-grid">
             <article class="menu-item" data-search="iced latte espresso milk coffee">
                 <div class="menu-photos">

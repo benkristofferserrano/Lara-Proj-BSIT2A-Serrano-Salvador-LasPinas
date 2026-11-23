@@ -44,3 +44,9 @@ body[data-theme=dark] .menu-banner{background-blend-mode:normal}
 
 /* Center the single copyright line in the footer. */
 .footer-bottom{justify-content:center;text-align:center}
+
+
+/* Café-wide image framing uses the B&B espresso palette in both themes. */
+.storefront-frame img { background: #2b1d17; }
+body[data-theme="dark"] .storefront-frame img { background: #211611; }
+body[data-theme="dark"] .storefront-copy h2 em { color: #d2a77e; }
