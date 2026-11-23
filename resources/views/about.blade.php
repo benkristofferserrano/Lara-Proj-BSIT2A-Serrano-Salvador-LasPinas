@@ -31,7 +31,17 @@
 
         <p>Whether you're catching up with friends, taking a study break, or enjoying a quiet moment, there's always a seat for you at B&B.</p>
 
-        <p>We want every detail, from the first greeting to the final sip, to feel thoughtful and genuine. Our café is a celebration of everyday connections and the joy of sharing something good.</p>
+       <div id="extraText" hidden>
+    <p>We want every detail, from the first greeting to the final sip, to feel thoughtful and genuine. Our café is a celebration of everyday connections and the joy of sharing something good.</p>
+</div>
+
+<button type="button"
+        id="readBtn"
+        class="read-more-btn"
+        aria-controls="extraText"
+        aria-expanded="false">
+    Read More
+</button>
     </div>
 </section>
 
@@ -83,5 +93,7 @@
 
     </div>
 </section>
-
+@push('scripts')
+<script src="{{ asset('js/about.js') }}" defer></script>
+@endpush
 @endsection
