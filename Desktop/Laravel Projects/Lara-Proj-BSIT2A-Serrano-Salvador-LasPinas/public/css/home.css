@@ -1,0 +1,71 @@
+.hero-slider{height:min(650px,68vw);min-height:480px;position:relative;background:#0d3028;overflow:hidden}.hero-slide{position:absolute;inset:0;background-color:#0d3028;background-image:linear-gradient(90deg,#0b2b24 0%,rgba(11,43,36,.82) 17%,rgba(11,43,36,.34) 34%,rgba(11,43,36,.18) 66%,rgba(11,43,36,.78) 83%,#0b2b24 100%),var(--hero-image);background-size:100% 100%,auto 100%;background-position:center,center;background-repeat:no-repeat;opacity:0;transition:opacity .7s}.hero-slide.active{opacity:1}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,25,21,.34),rgba(4,25,21,.08) 52%,rgba(4,25,21,.12))}.hero-copy{position:absolute;left:10%;top:50%;transform:translateY(-48%);max-width:560px;color:#fff}.hero-copy h1,.page-hero h1,.menu-banner h1{font:700 clamp(48px,6vw,78px)/1.08 'Playfair Display',serif;margin:0 0 20px;letter-spacing:-1.8px}.hero-copy h1 em,.page-hero h1 em,.menu-banner h1 em{color:#e2c8aa;font-weight:600}.hero-copy p{max-width:440px;color:#f7eee4;font-size:15px;margin:0 0 30px}.hero-controls{position:absolute;bottom:36px;left:10%;display:flex;align-items:center;gap:18px;color:#fff}.hero-controls button{background:none;border:0;color:#fff;cursor:pointer}.hero-prev,.hero-next{font-size:21px}.hero-dots{display:flex;gap:8px}.hero-dots button{width:7px;height:7px;border-radius:50%;background:#ffffff70;padding:0}.hero-dots button.active{background:#fff}.hero-index{position:absolute;right:7%;bottom:39px;color:#fff;font-size:10px;letter-spacing:2px}.hero-index i{display:inline-block;width:45px;height:1px;background:#ffffff9c;vertical-align:middle;margin:0 8px}.welcome-section{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center;padding-top:105px;padding-bottom:110px}.welcome-image{height:440px;position:relative}.welcome-image img{width:100%;height:100%;object-fit:contain;background:#0d3028}.image-note{position:absolute;bottom:0;left:0;background:var(--green);color:#fff;padding:12px 17px;font-size:9px;letter-spacing:2px}.welcome-copy h2,.section-heading h2,.visit-strip h2,.story-text h2,.team-section h2,.contact-info h2{font:700 clamp(34px,4vw,49px)/1.2 'Playfair Display',serif;margin:0 0 22px}.welcome-copy h2 em,.section-heading h2 em,.visit-strip h2 em,.story-text h2 em,.team-section h2 em,.contact-info h2 em{color:var(--green)}.welcome-copy p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:28px}.favorites-section{background:var(--cream);padding:88px 0 100px}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:38px}.section-heading h2{margin:0}.favorite-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.favorite-card{background:#fff}.favorite-card img{width:100%;height:245px;object-fit:cover;display:block}.favorite-card>div{padding:23px 24px 27px}.favorite-card span{font-size:9px;letter-spacing:1.5px;color:var(--green);font-weight:700}.favorite-card h3{font:700 23px 'Playfair Display',serif;margin:8px 0}.favorite-card p{color:var(--muted);font-size:12px;margin:0}.visit-strip{padding-top:75px;padding-bottom:75px;display:flex;align-items:center;justify-content:space-between}.visit-strip h2{margin:0}.visit-strip .eyebrow{margin-bottom:10px}@media(max-width:760px){.hero-slider{min-height:520px;height:75vh}.hero-copy{left:7%;right:7%}.hero-copy h1{font-size:51px}.hero-controls{left:7%}.welcome-section{grid-template-columns:1fr;gap:35px;padding-top:65px;padding-bottom:70px}.welcome-image{height:330px}.favorite-grid{grid-template-columns:1fr}.favorite-card img{height:230px}.section-heading{align-items:start;gap:20px;flex-direction:column}.favorites-section{padding:65px 0}.visit-strip{align-items:start;gap:25px;flex-direction:column}}
+
+.hero-slide{background-position:center 52%}.hero-index{z-index:3}
+
+/* Refined home hero typography and full-photo presentation */
+.hero-copy{max-width:540px;z-index:2}
+.hero-copy h1{font-size:clamp(44px,5.2vw,72px);line-height:1.04;letter-spacing:-1.5px;text-wrap:balance}
+.hero-copy p{max-width:420px;line-height:1.8}
+@media(max-width:760px){.hero-slider{min-height:560px;height:78vh}.hero-slide{background-size:100% 100%,auto 78%;background-position:center,center 42%}.hero-copy{top:45%;max-width:90%}.hero-copy h1{font-size:clamp(39px,10vw,52px)}.hero-copy p{font-size:13px}.hero-index{right:6%;bottom:34px}}
+
+/* Shared fading deep-green hero treatment to match the menu page. */
+.hero-slider{background-color:#0d3028}
+.hero-slide{background-image:linear-gradient(90deg,#0b2b24 0%,rgba(11,43,36,.84) 18%,rgba(11,43,36,.48) 38%,rgba(11,43,36,.16) 70%,rgba(11,43,36,.62) 100%),var(--hero-image)}
+
+
+/* Home hero: warm espresso framing shared by all three carousel slides. */
+.hero-slider{background-color:#2b1d17}
+.hero-slide{
+  background-color:#2b1d17;
+  background-image:
+    linear-gradient(90deg,
+      #2b1d17 0%,
+      rgba(43,29,23,.94) 12%,
+      rgba(43,29,23,.78) 23%,
+      rgba(43,29,23,.42) 39%,
+      rgba(43,29,23,.13) 58%,
+      rgba(43,29,23,.24) 76%,
+      rgba(43,29,23,.78) 89%,
+      #2b1d17 100%),
+    var(--hero-image);
+  background-size:100% 100%,auto 100%;
+  background-position:center,center;
+  background-repeat:no-repeat;
+}
+.hero-shade{
+  background:linear-gradient(90deg,rgba(31,20,15,.22),rgba(31,20,15,.04) 55%,rgba(31,20,15,.16));
+}
+.hero-copy{color:#fffaf4}
+.hero-copy .eyebrow{color:#f0d8bd}
+.hero-copy h1{color:#fffaf4;text-shadow:0 1px 18px rgba(20,12,8,.16)}
+.hero-copy h1 em{color:#dfbd99}
+.hero-copy p{color:#fff4e9;text-shadow:0 1px 10px rgba(20,12,8,.28)}
+.hero-controls,.hero-controls button{color:#fff8f0}
+.hero-dots button{background:rgba(255,248,240,.48)}
+.hero-dots button.active{background:#fff8f0}
+@media(max-width:760px){
+  .hero-slide{
+    background-image:
+      linear-gradient(90deg,rgba(43,29,23,.88),rgba(43,29,23,.42) 58%,rgba(43,29,23,.34)),
+      var(--hero-image);
+    background-size:100% 100%,auto 78%;
+    background-position:center,center 42%;
+  }
+  .hero-copy h1{color:#fffaf4}
+  .hero-copy h1 em{color:#dfbd99}
+}
+
+
+/* Espresso-brown image framing instead of the former green side bars. */
+.welcome-image img { background: #2b1d17; }
+.image-note { background: #68472f; color: #fff8f0; }
+
+/* Keep the invitation and the storefront/map feature visually connected. */
+.visit-strip { padding-top: 48px; padding-bottom: 24px; }
+.visit-strip + .storefront-visit { padding-top: 26px; }
+body[data-theme="dark"] .welcome-image img { background: #211611; }
+body[data-theme="dark"] .image-note { background: #8b5e3c; color: #fff8f0; }
+@media (max-width: 760px) {
+  .visit-strip { padding-top: 42px; padding-bottom: 20px; }
+  .visit-strip + .storefront-visit { padding-top: 22px; }
+}
