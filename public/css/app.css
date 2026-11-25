@@ -9,7 +9,7 @@ body[data-theme="dark"] .main-nav a:after{background:#c49a72}
 body[data-theme="dark"] .favorites-section,body[data-theme="dark"] .team-grid article,body[data-theme="dark"] .contact-form,body[data-theme="dark"] .menu-note{background:#30231c}
 body[data-theme="dark"] .favorite-card{background:#2b201a}
 body[data-theme="dark"] .form-row input,body[data-theme="dark"] .form-row textarea{background:#211914;color:#f1e6da;border-color:#66503e}
-body[data-theme="dark"] .menu-search input{color:#f1e6da}
+body[data-theme="dark"] .menu-search input{color:#30251f;caret-color:#30251f}body[data-theme="dark"] .menu-search input::placeholder{color:#756252;opacity:1}
 body[data-theme="dark"] .purpose-section{background:#38271d}
 body[data-theme="dark"] .site-footer{background:#17110e}
 body[data-theme="dark"] .page-hero:before{background:linear-gradient(90deg,rgba(25,16,11,.88),rgba(25,16,11,.35))}
